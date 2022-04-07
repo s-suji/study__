@@ -1,0 +1,6 @@
+1.빙고판 만들기
+ makeArr(int size) :빙고사이즈(size)에 따라 1부터 fullsize(= size * size)숫자로 초기화된 배열생성
+ shuffleArr() :배열섞기
+
+2. 빙고게임하기
+ 

@@ -16,10 +16,22 @@
     <Filter Include="bingogame">
       <UniqueIdentifier>{7ef55962-cb0f-41c8-a5ab-7862e8de9ca8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Bingogame_2">
+      <UniqueIdentifier>{dd2169ac-e169-4dac-a670-4353ae904b62}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bingo.h">
       <Filter>bingogame</Filter>
+    </ClInclude>
+    <ClInclude Include="Bingoboard.h">
+      <Filter>bingogame</Filter>
+    </ClInclude>
+    <ClInclude Include="Bingoboard_.h">
+      <Filter>Bingogame_2</Filter>
+    </ClInclude>
+    <ClInclude Include="Bingogame_.h">
+      <Filter>Bingogame_2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -29,5 +41,22 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Bingoboard.cpp">
+      <Filter>bingogame</Filter>
+    </ClCompile>
+    <ClCompile Include="main2.cpp">
+      <Filter>Bingogame_2</Filter>
+    </ClCompile>
+    <ClCompile Include="Bingoboard_.cpp">
+      <Filter>Bingogame_2</Filter>
+    </ClCompile>
+    <ClCompile Include="Bingogame_.cpp">
+      <Filter>Bingogame_2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="빙고함수정리.txt">
+      <Filter>Bingogame_2</Filter>
+    </Text>
   </ItemGroup>
 </Project>
