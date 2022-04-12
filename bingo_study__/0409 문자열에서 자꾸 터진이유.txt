@@ -1,0 +1,103 @@
+		//문자열터진이유
+		string string*;
+
+		input(0) -> string의 생성자를 호출하는거야 왜? T input
+		board(0) -> string* 에 nullptr를 대입하는거야 왜? T* board
+		
+		0 = nullptr = NULL
+
+		 "asdf"의 자료형? 
+		 wchar_t가 뭐임. 문자.
+		 그래서 "asdf"가 wchar_t임???
+
+		 아니잖아
+		 그럼뭐야
+		 wchar_t* char* 둘중 하나겠지. 
+
+		 string("asdf")를 호출한다는건 -> string(const char* str);
+		
+		 string(0)
+		 컴퓨터는 0 = nullptr = NULL 로 취급함.
+		 string(0)를 호출한다는건 -> string(int number) 랑 string(const char* str) 이 생성자 중에서 뭘 호출할거같음?
+
+		 string(3) 했을때 안됬잖아
+		 터졌다는건 컴파일이 안된거랑 같은게 아니다. 
+		 string(int number)함수 자체가 없다는 소리잖아
+		 string(0)를 호출한다는건 -> string(const char* str)를 호출한다는거지.
+
+		 string(const char* str) 호출이 되었어 string(0)에서. 0이 nullptr로 해석된거지 컴퓨터가
+		 근데 만약에 string(const char* str)함수안에서 str을 건드리는 부분이 있어.
+		 근데 str이 올바르지 않은 메모리야. string(0)의 경우에는 nullptr에 접근한거지
+		 프로그램이 터져 안터져?
+		 터지겟지
+		 원인규명 끝
+
+		 그래서 BingoboardValue<string>() : input(0) -> 터진다 안터진다?
+		 터졌음
+		 왜? 
+		 0. input이 string이야. 그래서 input(0)했을떄 생성자를 호출해야해. 
+		 1. string(int) 생성자가 없어.
+		 2. 그래서 string(const char* str) 생성자를 호출을 했어
+		 3. str= nullptr인 상태야. 그런데 함수안에서 str을 건드리는 부분이 있었나봐.
+		 근데 nullptr을 넣었으니까 nullptr을 함수안에서 건드렸나봐.
+		 4. 그래서 터짐. 
+
+		 어떻게 해야해?
+		 1. input을 초기화 리스트에서 지우던가
+		 2. input("") 빈 문자열로 초기화해주던가.
+
+
+		 이 모든 비극은 니가 생성자와 템플릿 공부를 안해서
+		 지식이 부족해서 벌어짐. rip 김민지 2022-04-09
+		 행맨 게임 만들어와. 
+		 char 밖에 쓸일이없는데 템플릿으로 구현해와 이것처럼. 
+		 
+		 요구사항
+		 1. 정답은 5자.
+		 2. 기회는 n번. n번은 입력받는다.
+		 3. 단어는 너가 5글자로 된 영단어 최소 10개를 문제 배열에 넣어서 그 중 랜덤으로 선택.
+		 4. n번안에 풀면 바로 종료 후 성공 메세지 출력.
+		 5. 못풀면 종료, 정답 공개 후 실패 메세지 출력.
+		 최대한 네이밍 신경쓰고 클래스화 신경써서.
+		 04-11 내 퇴근시간 7시까지. 깃허브에 올리고 주소를 나한테 줘. 
+
+
+
+		 // 숙제
+		// 포인터 클래스(니가 만들어서) 했을떄 생성자 호출되는지 안되는지 확인 직접.
+		// 생성자 앞에는 a에서는 호출. 그러나 포인터로 선언한 ptr쪽에서는 그냥 터짐. 컴파일되긴했음. 근데 터짐
+
+		class TestClass
+		{
+		public:
+			int member;
+
+		public:
+			TestClass()
+				:member(18)
+			{
+				std ::cout << "생성자 호출되었습니다";
+			};
+		};
+		/*
+		main()
+		{
+			TestClass a;
+			std::cout << a.member;
+
+			TestClass* ptr;
+			std::cout << ptr->member;
+
+	
+
+			// 생성자가 호출이 된다는건 = 컴퓨터 메모리에 이 객체에 관한 메모리가 잡힌다는거
+			// 포인터를 선언하는건 메모리에 잡힌다는 소리야? 객체에 대한 메모리가 잡히지않음. 
+	
+			ptr = new TestClass();
+			// 메모리가 할당이됬다 = 이 객체에 대한 메모리 공간을 잡았다
+			// 생성자가 호출이된다. 
+
+			std::cout << ptr->member;
+			// ok
+		}
+		*/

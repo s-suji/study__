@@ -33,6 +33,9 @@
     <ClInclude Include="Bingogame_.h">
       <Filter>Bingogame_2</Filter>
     </ClInclude>
+    <ClInclude Include="BingoboardValue.h">
+      <Filter>Bingogame_2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bingo.cpp">
@@ -53,9 +56,15 @@
     <ClCompile Include="Bingogame_.cpp">
       <Filter>Bingogame_2</Filter>
     </ClCompile>
+    <ClCompile Include="BoardValueTest.cpp">
+      <Filter>Bingogame_2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="빙고함수정리.txt">
+      <Filter>Bingogame_2</Filter>
+    </Text>
+    <Text Include="0409 문자열에서 자꾸 터진이유.txt">
       <Filter>Bingogame_2</Filter>
     </Text>
   </ItemGroup>
