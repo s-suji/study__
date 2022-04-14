@@ -45,26 +45,28 @@ template <typename T>
 class BingoboardValue
 {
 private:
-	T* board;
+	T* board_;
 	T input;
+
 
 public:
 	BingoboardValue()
-		: board(nullptr)
+		: board_(nullptr)
+		
 	{
 		
 	}
 
 	~BingoboardValue()
 	{
-		delete[] board;
+		delete[] board_;
 	}
 
-	T* createArr(int fullsize)
+	T* create(int fullsize)
 	{
-		board = new T[fullsize]; // T의 생성자가 호출이 되는 부분
+		board_ = new T[fullsize]; // T의 생성자가 호출이 되는 부분
 
-		std::cout << " 빙고를 구성할 내용을 입력하시오 : " << std::endl;
+		std::cout << " 빙고를 구성할 내용을 입력하시오 :" << std::endl;
 		for (int i = 0; i < fullsize; ++i)
 		{
 			input = {};
@@ -72,16 +74,18 @@ public:
 			unsigned int size = sizeof input;
 			T* arr = new T[size];
 			*arr = input;
-			board[i] = *arr;
+			board_[i] = *arr;
 			delete[] arr;
 		}
+		system("cls");
 
-		return board;
+		return board_;
 	}
+
 
 	inline T* getboard()
 	{
-		return board;
+		return board_;
 	}
 
 };

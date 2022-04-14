@@ -1,7 +1,8 @@
 #include "Bingogame_.h"
 #include "Bingoboard_.h"
 #include <iostream>
-
+#include <string>
+/*
 Bingogame_::Bingogame_()
 	:bingocount(0)
 	,input(0)
@@ -17,8 +18,7 @@ void Bingogame_::Start()
 {
 	Bingoboard_ Bingoboard;
 	Bingoboard.create(Bingoboard.inputBingoSize());
-	Bingoboard.shuffle();
-	printBoard(Bingoboard.getBoard(),Bingoboard.getSize());
+	printBoard(Bingoboard.getCompleteBoard(),Bingoboard.getSize());
 	while (true)
 	{
 		getInput();
@@ -26,13 +26,13 @@ void Bingogame_::Start()
 		if (input == 0)
 			break;
 		
-		checkInput(Bingoboard.getBoard(), Bingoboard.getSize(), Bingoboard.getFullSize());
-		compareInputwithBoard(Bingoboard.getBoard(), Bingoboard.getFullSize());
-		checkBingoComplete(Bingoboard.getBoard(), Bingoboard.getSize());
-		bool fiveBingo = checkBingoComplete(Bingoboard.getBoard(), Bingoboard.getSize());
+		checkInput(Bingoboard.getCompleteBoard(), Bingoboard.getSize(), Bingoboard.getFullSize());
+		compareInputwithBoard(Bingoboard.getCompleteBoard(), Bingoboard.getFullSize());
+		checkBingoComplete(Bingoboard.getCompleteBoard(), Bingoboard.getSize());
+		bool fiveBingo = checkBingoComplete(Bingoboard.getCompleteBoard(), Bingoboard.getSize());
 		if(fiveBingo == true)
 			break;
-		printBoard(Bingoboard.getBoard(), Bingoboard.getSize());
+		printBoard(Bingoboard.getCompleteBoard(), Bingoboard.getSize());
 		
 		//checkBingoError(Bingoboard.getboard(), Bingoboard.getsize(), Bingoboard.getfullsize());
 		
@@ -194,4 +194,4 @@ void Bingogame_::printEndmessage()
 	std::cout << "0을 입력하였거나, 5개 이상의 빙고가 되었습니다. 잠시 후 게임이 종료 됩니다.";
 }
 
-
+*/

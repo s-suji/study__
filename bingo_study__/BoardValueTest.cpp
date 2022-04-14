@@ -5,7 +5,7 @@
 int main()
 {
 	BingoboardValue<std::string> test;
-	test.BingoboardValue<std::string>::createArr(25);
+	test.BingoboardValue<std::string>::create(25);
 
 	for (int i = 0; i < 25; ++i)
 	{

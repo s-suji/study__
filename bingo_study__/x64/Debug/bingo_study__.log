@@ -1,2 +1,6 @@
-﻿  BoardValueTest.cpp
+﻿  Bingogame_.cpp
+C:\Users\Kim\source\repos\bingo_study__\bingo_study__\Bingoboard_.h(1,1): warning C4828: 파일에 0x5af 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 949).
+  main2.cpp
+C:\Users\Kim\source\repos\bingo_study__\bingo_study__\Bingoboard_.h(1,1): warning C4828: 파일에 0x5af 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 949).
+  코드를 생성하고 있습니다...
   bingo_study__.vcxproj -> C:\Users\Kim\source\repos\bingo_study__\x64\Debug\bingo_study__.exe
